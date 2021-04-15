@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="cust_orders" id="E885CBD0-2B83-347B-8FFC-043AD649C5E5" version="3.5">
+<createdBy>eleo0010</createdBy>
+<createdTime>2021-04-15 00:08:53 UTC</createdTime>
+<ownerDesignName>cust_orders</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>E885CBD0-2B83-347B-8FFC-043AD649C5E5</designId>
+</OSDM_Design>
