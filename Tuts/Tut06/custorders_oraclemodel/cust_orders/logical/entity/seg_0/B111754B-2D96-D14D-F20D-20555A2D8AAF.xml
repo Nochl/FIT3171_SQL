@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="27A0F652-5AAC-6C84-BB1D-E5F0EC37109F" name="CUSTOMER">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B111754B-2D96-D14D-F20D-20555A2D8AAF" name="PRODUCT">
 <createdBy>eleo0010</createdBy>
-<createdTime>2021-04-15 00:32:35 UTC</createdTime>
+<createdTime>2021-04-15 01:00:23 UTC</createdTime>
 <ownerDesignName>cust_orders</ownerDesignName>
 <engineerTo>
 <item key="1BB838F2-CA28-ED44-4099-0E26EDE4BACC" value="true"/>
@@ -15,10 +15,10 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="cust_no" id="2C347FB3-3FE4-FC3B-CAD9-E776FC8CE55B">
+<Attribute name="prod_no" id="F938BD13-5597-47FF-5419-DDEC5ECBC006">
 <createdBy>eleo0010</createdBy>
-<createdTime>2021-04-15 00:35:23 UTC</createdTime>
-<commentInRDBMS><![CDATA[Customer Number]]></commentInRDBMS>
+<createdTime>2021-04-15 01:00:31 UTC</createdTime>
+<commentInRDBMS><![CDATA[Product Identification Number]]></commentInRDBMS>
 <ownerDesignName>cust_orders</ownerDesignName>
 <engineerTo>
 <item key="1BB838F2-CA28-ED44-4099-0E26EDE4BACC" value="true"/>
@@ -26,13 +26,13 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>7</dataTypePrecision>
-<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cust_name" id="0192D47C-3C2B-1414-46D0-E150EF2145AE">
+<Attribute name="prod_desc" id="037EF295-5046-DA2E-0F57-C93F15C45CE0">
 <createdBy>eleo0010</createdBy>
-<createdTime>2021-04-15 00:35:48 UTC</createdTime>
-<commentInRDBMS><![CDATA[Customer Name]]></commentInRDBMS>
+<createdTime>2021-04-15 01:01:07 UTC</createdTime>
+<commentInRDBMS><![CDATA[Records the product description]]></commentInRDBMS>
 <ownerDesignName>cust_orders</ownerDesignName>
 <engineerTo>
 <item key="1BB838F2-CA28-ED44-4099-0E26EDE4BACC" value="true"/>
@@ -40,27 +40,13 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50</dataTypeSize>
-<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cust_address" id="90D49ACF-A099-3CB2-B5F4-F63BAC51D1A4">
+<Attribute name="prod_unitprice" id="019F72A4-68E7-EFDD-49C1-9C5BAFFADFDA">
 <createdBy>eleo0010</createdBy>
-<createdTime>2021-04-15 00:36:05 UTC</createdTime>
-<commentInRDBMS><![CDATA[Customer Address]]></commentInRDBMS>
-<ownerDesignName>cust_orders</ownerDesignName>
-<engineerTo>
-<item key="1BB838F2-CA28-ED44-4099-0E26EDE4BACC" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50</dataTypeSize>
-<ownDataTypeParameters>50,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="cust_phone" id="7C8533F6-AC4C-7F6E-DC7D-860AAC41BFD8">
-<createdBy>eleo0010</createdBy>
-<createdTime>2021-04-15 00:36:35 UTC</createdTime>
-<commentInRDBMS><![CDATA[Customer Phone Number]]></commentInRDBMS>
+<createdTime>2021-04-15 01:03:01 UTC</createdTime>
+<commentInRDBMS><![CDATA[Product Price]]></commentInRDBMS>
 <ownerDesignName>cust_orders</ownerDesignName>
 <engineerTo>
 <item key="1BB838F2-CA28-ED44-4099-0E26EDE4BACC" value="true"/>
@@ -68,42 +54,53 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>10</dataTypeSize>
-<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cust_level" id="D22D745A-973E-BC07-9A2F-737D659FB26B">
+<Attribute name="prod_category" id="52454F5A-3E4A-3694-37B4-5032064BD09D">
 <createdBy>eleo0010</createdBy>
-<createdTime>2021-04-15 01:25:37 UTC</createdTime>
-<commentInRDBMS><![CDATA[Customer leve, G-Gold, S-Silver, B-Bronze]]></commentInRDBMS>
+<createdTime>2021-04-15 01:03:36 UTC</createdTime>
+<commentInRDBMS><![CDATA[Product category]]></commentInRDBMS>
 <ownerDesignName>cust_orders</ownerDesignName>
 <engineerTo>
 <item key="1BB838F2-CA28-ED44-4099-0E26EDE4BACC" value="true"/>
 </engineerTo>
-<constraintName>chk_custlevel</constraintName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT025</logicalDatatype>
-<dataTypeSize>1</dataTypeSize>
-<listOfValues>
-<valueDef value="B" description="Bronze"/>
-<valueDef value="G" description="Gold"/>
-<valueDef value="S" description="Silver"/>
-</listOfValues>
-<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pcat_id" id="F88AC0E2-416F-D367-6FD9-033014EF5440">
+<createdBy>eleo0010</createdBy>
+<createdTime>2021-04-15 01:32:15 UTC</createdTime>
+<commentInRDBMS><![CDATA[Product Category ID]]></commentInRDBMS>
+<generatorID>40BC5009-6C0A-E9E1-9745-F9422F13EAEB</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<engineerTo>
+<item key="1BB838F2-CA28-ED44-4099-0E26EDE4BACC" value="true"/>
+</engineerTo>
+<referedAttribute>05F68E43-0691-260F-2C18-94AE4991D40E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="4B98EBCE-F3F7-4F49-EAA0-0606A9788A31" name="Customer PK">
+<identifier id="B518AE7A-5942-1C6B-1CAF-10AFC5D56CBD" name="PRODUCT PK">
 <createdBy>eleo0010</createdBy>
-<createdTime>2021-04-15 00:35:44 UTC</createdTime>
+<createdTime>2021-04-15 01:00:51 UTC</createdTime>
 <ownerDesignName>cust_orders</ownerDesignName>
 <engineerTo>
 <item key="1BB838F2-CA28-ED44-4099-0E26EDE4BACC" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>2C347FB3-3FE4-FC3B-CAD9-E776FC8CE55B</attributeRef>
+<attributeRef>F938BD13-5597-47FF-5419-DDEC5ECBC006</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

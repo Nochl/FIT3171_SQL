@@ -1,0 +1,110 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D6911697-6152-E526-1A40-053BB959927B" name="ORDERLINE">
+<createdBy>eleo0010</createdBy>
+<createdTime>2021-04-15 01:38:19 UTC</createdTime>
+<generatorID>D95BBB25-460F-257D-C9FF-D2B671B8FA74</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ol_qtyordered" id="B0D6BC79-D444-529E-42CD-5A46D9954033">
+<createdBy>eleo0010</createdBy>
+<createdTime>2021-04-15 01:38:19 UTC</createdTime>
+<commentInRDBMS><![CDATA[Number of product ordered]]></commentInRDBMS>
+<generatorID>A412382D-969D-60BC-6086-D26901CA2AD7</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ol_lineprice" id="B95E4B87-DB0D-D52B-A938-6983D88D2AF3">
+<createdBy>eleo0010</createdBy>
+<createdTime>2021-04-15 01:38:19 UTC</createdTime>
+<commentInRDBMS><![CDATA[Orderline Price]]></commentInRDBMS>
+<generatorID>3D156757-F4D0-577B-6FEB-E1FCE2F3D7B2</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,6,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="order_no" id="D7F13FE9-F56F-424F-DFD8-F0FE042CF28C">
+<createdBy>eleo0010</createdBy>
+<createdTime>2021-04-15 01:38:19 UTC</createdTime>
+<commentInRDBMS><![CDATA[Order Number]]></commentInRDBMS>
+<generatorID>7C893D83-995B-66D5-132D-E3E15A117F2A</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D95D97D7-F233-2230-028F-165EA956CE5E" referredColumn="F5DD1C14-9CC3-5BFA-CBD6-EB5297776DEA"/>
+</associations>
+</Column>
+<Column name="prod_no" id="7C3BFADC-9D8F-2E39-5F0E-1CAAF9CA6A35">
+<createdBy>eleo0010</createdBy>
+<createdTime>2021-04-15 01:38:19 UTC</createdTime>
+<commentInRDBMS><![CDATA[Product Identification Number]]></commentInRDBMS>
+<generatorID>78A1BEF5-E391-D479-DE68-B3742823D971</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="52512C08-FBA2-F3C0-713C-EF394B5ED2A4" referredColumn="CDAB1DEA-F834-B958-2946-1C9D11495903"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="00C6C1E1-A8EC-47C3-F81D-1E886EA357A0" name="ORDERLINE_PK">
+<createdBy>eleo0010</createdBy>
+<createdTime>2021-04-15 01:38:19 UTC</createdTime>
+<generatorID>FCE65048-29D0-059D-81EB-A742A8A7DD4A</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D7F13FE9-F56F-424F-DFD8-F0FE042CF28C"/>
+<colUsage columnID="7C3BFADC-9D8F-2E39-5F0E-1CAAF9CA6A35"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="33DA7A7B-9CB8-4725-6494-A552301046F6" name="ORDERS_ORDERLINE">
+<createdBy>eleo0010</createdBy>
+<createdTime>2021-04-15 01:38:19 UTC</createdTime>
+<generatorID>030513AA-9C5C-1D9D-EE5E-A380F835A987</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D7F13FE9-F56F-424F-DFD8-F0FE042CF28C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="59A44C6A-8582-6FE1-2ED4-248B9CED18AE" name="PRODUCT_ORDERLINE">
+<createdBy>eleo0010</createdBy>
+<createdTime>2021-04-15 01:38:19 UTC</createdTime>
+<generatorID>5CC1C7B7-7215-6630-CE2C-7F97CB14C5A8</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7C3BFADC-9D8F-2E39-5F0E-1CAAF9CA6A35"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

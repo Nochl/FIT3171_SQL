@@ -1,0 +1,95 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D95BBB25-460F-257D-C9FF-D2B671B8FA74" name="ORDERLINE">
+<createdBy>eleo0010</createdBy>
+<createdTime>2021-04-15 01:04:07 UTC</createdTime>
+<ownerDesignName>cust_orders</ownerDesignName>
+<engineerTo>
+<item key="1BB838F2-CA28-ED44-4099-0E26EDE4BACC" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ol_qtyordered" id="A412382D-969D-60BC-6086-D26901CA2AD7">
+<createdBy>eleo0010</createdBy>
+<createdTime>2021-04-15 01:04:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[Number of product ordered]]></commentInRDBMS>
+<ownerDesignName>cust_orders</ownerDesignName>
+<engineerTo>
+<item key="1BB838F2-CA28-ED44-4099-0E26EDE4BACC" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ol_lineprice" id="3D156757-F4D0-577B-6FEB-E1FCE2F3D7B2">
+<createdBy>eleo0010</createdBy>
+<createdTime>2021-04-15 01:04:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[Orderline Price]]></commentInRDBMS>
+<ownerDesignName>cust_orders</ownerDesignName>
+<engineerTo>
+<item key="1BB838F2-CA28-ED44-4099-0E26EDE4BACC" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,6,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="order_no" id="7C893D83-995B-66D5-132D-E3E15A117F2A">
+<createdBy>eleo0010</createdBy>
+<createdTime>2021-04-15 01:05:33 UTC</createdTime>
+<commentInRDBMS><![CDATA[Order Number]]></commentInRDBMS>
+<generatorID>030513AA-9C5C-1D9D-EE5E-A380F835A987</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<engineerTo>
+<item key="1BB838F2-CA28-ED44-4099-0E26EDE4BACC" value="true"/>
+</engineerTo>
+<referedAttribute>06E9D206-AB16-DEE5-7FB9-083ADA73F006</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="prod_no" id="78A1BEF5-E391-D479-DE68-B3742823D971">
+<createdBy>eleo0010</createdBy>
+<createdTime>2021-04-15 01:08:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[Product Identification Number]]></commentInRDBMS>
+<generatorID>5CC1C7B7-7215-6630-CE2C-7F97CB14C5A8</generatorID>
+<ownerDesignName>cust_orders</ownerDesignName>
+<engineerTo>
+<item key="1BB838F2-CA28-ED44-4099-0E26EDE4BACC" value="true"/>
+</engineerTo>
+<referedAttribute>F938BD13-5597-47FF-5419-DDEC5ECBC006</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="FCE65048-29D0-059D-81EB-A742A8A7DD4A" name="ORDERLINE PK">
+<createdBy>eleo0010</createdBy>
+<createdTime>2021-04-15 01:06:13 UTC</createdTime>
+<ownerDesignName>cust_orders</ownerDesignName>
+<engineerTo>
+<item key="1BB838F2-CA28-ED44-4099-0E26EDE4BACC" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>7C893D83-995B-66D5-132D-E3E15A117F2A</attributeRef>
+<attributeRef>78A1BEF5-E391-D479-DE68-B3742823D971</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -9,6 +9,7 @@
 <sourcePk>4B98EBCE-F3F7-4F49-EAA0-0606A9788A31</sourcePk>
 <identifying>false</identifying>
 <nameOnSource>places</nameOnSource>
+<nameOnTarget> </nameOnTarget>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
