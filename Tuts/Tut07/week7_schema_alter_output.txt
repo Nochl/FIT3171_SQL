@@ -1,31 +1,16 @@
 SQL> 
 SQL> DROP TABLE ENROLMENT;
 
-Error starting at line : 5 in command -
-DROP TABLE ENROLMENT
-Error report -
-ORA-00942: table or view does not exist
-00942. 00000 -  "table or view does not exist"
-*Cause:    
-*Action:
+Table ENROLMENT dropped.
+
 SQL> DROP TABLE STUDENT;
 
-Error starting at line : 6 in command -
-DROP TABLE STUDENT
-Error report -
-ORA-00942: table or view does not exist
-00942. 00000 -  "table or view does not exist"
-*Cause:    
-*Action:
+Table STUDENT dropped.
+
 SQL> DROP TABLE UNIT;
 
-Error starting at line : 7 in command -
-DROP TABLE UNIT
-Error report -
-ORA-00942: table or view does not exist
-00942. 00000 -  "table or view does not exist"
-*Cause:    
-*Action:
+Table UNIT dropped.
+
 SQL> 
 SQL> /*
 SQL>Databases Week 7 Tutorial Sample Solution
@@ -176,8 +161,11 @@ SQL> /* Add ENROLMENT constraints here */
 SQL> 
 SQL> ALTER TABLE ENROLMENT 
   2      ADD
-  3          ( CONSTRAINT fk_student_number FOREIGN KEY (stu_nbr) REFERENCES STUDENT (stu_nbr),
-  4           CONSTRAINT fk_unit_code FOREIGN KEY (unit_code) REFERENCES UNIT (unit_code));
+  3          (CONSTRAINT pk_enrolment PRIMARY KEY (stu_nbr, unit_code, enrol_year, enrol_semester), 
+  4           CONSTRAINT fk_student_number FOREIGN KEY (stu_nbr) REFERENCES STUDENT (stu_nbr),
+  5           CONSTRAINT fk_unit_code FOREIGN KEY (unit_code) REFERENCES UNIT (unit_code),
+  6           CONSTRAINT grade_chk CHECK (enrol_grade in ('N', 'P', 'C', 'D', 'HD'))
+  7           );
 
 Table ENROLMENT altered.
 

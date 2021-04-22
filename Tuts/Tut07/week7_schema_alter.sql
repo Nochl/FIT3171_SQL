@@ -104,8 +104,11 @@ COMMENT ON COLUMN enrolment.enrol_grade IS
 
 ALTER TABLE ENROLMENT 
     ADD
-        ( CONSTRAINT fk_student_number FOREIGN KEY (stu_nbr) REFERENCES STUDENT (stu_nbr),
-         CONSTRAINT fk_unit_code FOREIGN KEY (unit_code) REFERENCES UNIT (unit_code));
+        (CONSTRAINT pk_enrolment PRIMARY KEY (stu_nbr, unit_code, enrol_year, enrol_semester), 
+         CONSTRAINT fk_student_number FOREIGN KEY (stu_nbr) REFERENCES STUDENT (stu_nbr),
+         CONSTRAINT fk_unit_code FOREIGN KEY (unit_code) REFERENCES UNIT (unit_code),
+         CONSTRAINT grade_chk CHECK (enrol_grade in ('N', 'P', 'C', 'D', 'HD'))
+         );
 
 
 SPOOL OFF
