@@ -1,8 +1,11 @@
 SELECT
-    s.studid, s.studfname AS NAME, e.unitcode, e.ofyear, e.semester
-FROM 
-    (uni.student s JOIN uni.enrolment e ON s.studid = e.studid)
+    studid, studfname || ' ' || studlname AS name, unitcode, to_char(ofyear, 'YYYY') AS year, semester
+
+FROM
+    uni.student natural join uni.enrolment
+
 WHERE
-    e.mark IS NULL
+    mark IS NULL
+
 ORDER BY
-    unitcode DESC, studid DESC;
+    unitcode, studid;
