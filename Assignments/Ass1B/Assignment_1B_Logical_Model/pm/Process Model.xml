@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProcessModel class="oracle.dbtools.crest.model.design.process.ProcessModel" name="Process Model" id="0E74131D-9A6F-CFD9-D861-7055D60B58CA">
+<createdBy>eleo0010</createdBy>
+<createdTime>2021-04-27 16:28:10 UTC</createdTime>
+<ownerDesignName>Assignment_1B_Logical_Model</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</ProcessModel>

@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="74317851-B34E-65BC-C8E4-7C6BC3CECE14" name="VET">
+<createdBy>eleo0010</createdBy>
+<createdTime>2021-04-27 16:31:30 UTC</createdTime>
+<ownerDesignName>Assignment_1B_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="BE459599-F259-7D7F-E4B3-E2DE54993DD6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="vet_id" id="05D6DB0C-B71B-E2AE-E7CF-122F466DD82C">
+<createdBy>eleo0010</createdBy>
+<createdTime>2021-04-27 16:32:02 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique Identifier of Vetinarian]]></commentInRDBMS>
+<ownerDesignName>Assignment_1B_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="BE459599-F259-7D7F-E4B3-E2DE54993DD6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="vet_name" id="2B107541-3222-3E5A-333F-AACCC543A9D8">
+<createdBy>eleo0010</createdBy>
+<createdTime>2021-04-27 16:34:54 UTC</createdTime>
+<commentInRDBMS><![CDATA[Vetinarian Name]]></commentInRDBMS>
+<ownerDesignName>Assignment_1B_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="BE459599-F259-7D7F-E4B3-E2DE54993DD6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="65634574-8EAC-82D6-B60B-26C4ED6E20F4" name="VEt PK">
+<createdBy>eleo0010</createdBy>
+<createdTime>2021-04-27 16:34:38 UTC</createdTime>
+<ownerDesignName>Assignment_1B_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="BE459599-F259-7D7F-E4B3-E2DE54993DD6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>05D6DB0C-B71B-E2AE-E7CF-122F466DD82C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
