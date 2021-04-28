@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="CLINIC_VET" directorySegmentName="seg_0" id="B44DB824-1BA4-AFBF-1AE3-45FB927A17F6">
+<createdBy>eleo0010</createdBy>
+<createdTime>2021-04-28 04:32:28 UTC</createdTime>
+<ownerDesignName>Assignment_1B_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="BE459599-F259-7D7F-E4B3-E2DE54993DD6" value="true"/>
+</engineerTo>
+<sourcePk>736FA8E4-DDD6-50D6-03B7-02A615C87C0A</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>belongs_to</nameOnSource>
+<nameOnTarget> </nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>F61C5478-8F7D-17C0-BC42-083E8E1E7350</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>74317851-B34E-65BC-C8E4-7C6BC3CECE14</targetEntity>
+<transferable>true</transferable>
+</Relation>

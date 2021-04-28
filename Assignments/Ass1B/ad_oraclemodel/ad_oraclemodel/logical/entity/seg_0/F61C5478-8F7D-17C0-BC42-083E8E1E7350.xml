@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F61C5478-8F7D-17C0-BC42-083E8E1E7350" name="CLINIC">
+<createdBy>eleo0010</createdBy>
+<createdTime>2021-04-28 04:09:44 UTC</createdTime>
+<ownerDesignName>Assignment_1B_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="BE459599-F259-7D7F-E4B3-E2DE54993DD6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="clinic_id" id="0E8F4940-D940-971B-4AD9-AE84403C0BD2">
+<createdBy>eleo0010</createdBy>
+<createdTime>2021-04-28 04:11:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[Unique identifier for Clinic]]></commentInRDBMS>
+<ownerDesignName>Assignment_1B_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="BE459599-F259-7D7F-E4B3-E2DE54993DD6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="clinic_name" id="E9A99463-A962-4912-D91A-10CE995C356C">
+<createdBy>eleo0010</createdBy>
+<createdTime>2021-04-28 04:11:45 UTC</createdTime>
+<commentInRDBMS><![CDATA[Name of Clinic]]></commentInRDBMS>
+<ownerDesignName>Assignment_1B_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="BE459599-F259-7D7F-E4B3-E2DE54993DD6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="clinic_phone" id="9C05F598-EE96-2348-3305-B563CC5CA95C">
+<createdBy>eleo0010</createdBy>
+<createdTime>2021-04-28 04:12:06 UTC</createdTime>
+<commentInRDBMS><![CDATA[Phone number of clinic]]></commentInRDBMS>
+<ownerDesignName>Assignment_1B_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="BE459599-F259-7D7F-E4B3-E2DE54993DD6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="clinic_address" id="96D89BE9-D7BE-C6E0-B378-7C9B15378184">
+<createdBy>eleo0010</createdBy>
+<createdTime>2021-04-28 04:12:37 UTC</createdTime>
+<commentInRDBMS><![CDATA[Address of clinic]]></commentInRDBMS>
+<ownerDesignName>Assignment_1B_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="BE459599-F259-7D7F-E4B3-E2DE54993DD6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="736FA8E4-DDD6-50D6-03B7-02A615C87C0A" name="CLINIC PK">
+<createdBy>eleo0010</createdBy>
+<createdTime>2021-04-28 04:11:35 UTC</createdTime>
+<ownerDesignName>Assignment_1B_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="BE459599-F259-7D7F-E4B3-E2DE54993DD6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0E8F4940-D940-971B-4AD9-AE84403C0BD2</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

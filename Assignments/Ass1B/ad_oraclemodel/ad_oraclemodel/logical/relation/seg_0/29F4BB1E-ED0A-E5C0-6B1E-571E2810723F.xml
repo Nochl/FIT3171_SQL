@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="SPECIALISATION_VET" directorySegmentName="seg_0" id="29F4BB1E-ED0A-E5C0-6B1E-571E2810723F">
+<createdBy>eleo0010</createdBy>
+<createdTime>2021-04-28 04:28:29 UTC</createdTime>
+<ownerDesignName>Assignment_1B_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="BE459599-F259-7D7F-E4B3-E2DE54993DD6" value="true"/>
+</engineerTo>
+<sourcePk>C0EA3B5B-4587-C920-0302-11C92254556D</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>B628F64C-52E5-02E7-CADF-9BCE1C6E0E4D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>74317851-B34E-65BC-C8E4-7C6BC3CECE14</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="APPOINTMENT_PROCEDURE" directorySegmentName="seg_0" id="62C88B52-0EB2-41BD-1218-333696CA1130">
+<createdBy>eleo0010</createdBy>
+<createdTime>2021-04-28 04:44:35 UTC</createdTime>
+<ownerDesignName>Assignment_1B_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="BE459599-F259-7D7F-E4B3-E2DE54993DD6" value="true"/>
+</engineerTo>
+<sourcePk>ADA8E74E-3EB9-83A8-ABD3-FD2C7C2678DE</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>has</nameOnSource>
+<nameOnTarget> </nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>A61D9A80-D07E-075F-0F21-105EC356FA34</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>877DF416-ADFA-4836-6642-83B99C1E9B5C</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

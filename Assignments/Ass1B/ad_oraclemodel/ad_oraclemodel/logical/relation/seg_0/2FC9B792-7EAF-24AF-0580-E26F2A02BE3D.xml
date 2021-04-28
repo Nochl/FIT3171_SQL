@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="APPOINTMENT_PET" directorySegmentName="seg_0" id="2FC9B792-7EAF-24AF-0580-E26F2A02BE3D">
+<createdBy>eleo0010</createdBy>
+<createdTime>2021-04-28 04:36:54 UTC</createdTime>
+<ownerDesignName>Assignment_1B_Logical_Model</ownerDesignName>
+<engineerTo>
+<item key="BE459599-F259-7D7F-E4B3-E2DE54993DD6" value="true"/>
+</engineerTo>
+<sourcePk>574EFBB7-87BB-1B40-28F8-4CFD15D48D0A</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>attends</nameOnSource>
+<nameOnTarget> </nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>20559338-B0A3-8D64-09B6-D6B47DE247EC</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>A61D9A80-D07E-075F-0F21-105EC356FA34</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
