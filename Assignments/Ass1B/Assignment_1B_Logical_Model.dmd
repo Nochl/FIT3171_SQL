@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Assignment_1B_Logical_Model" id="81A15096-5EA5-5116-D490-CF3FCBAD2A12" version="3.5">
-<createdBy>eleo0010</createdBy>
-<createdTime>2021-04-27 16:28:08 UTC</createdTime>
-<ownerDesignName>Assignment_1B_Logical_Model</ownerDesignName>
-<capitalNames>false</capitalNames>
-<designId>81A15096-5EA5-5116-D490-CF3FCBAD2A12</designId>
-</OSDM_Design>
