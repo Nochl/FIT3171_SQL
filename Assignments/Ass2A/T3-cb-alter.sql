@@ -58,4 +58,43 @@ I chose to add a new attribute for this function because:
 
 -- (c)
 
+DROP SEQUENCE env_seq;
 
+CREATE SEQUENCE env_seq
+    START WITH 1
+    INCREMENT BY 1;
+
+CREATE TABLE environment (
+  env_id			 NUMBER(6)     NOT NULL,
+  env_name           VARCHAR2(40)  NOT NULL
+);
+
+COMMENT ON COLUMN environment.env_id IS
+    'Identifier for the environment';
+    
+COMMENT ON COLUMN environment.env_name IS
+    'Name of the environment';    
+
+INSERT INTO environment (env_id, env_name) values (env_seq.nextval, 'Zoo');
+INSERT INTO environment (env_id, env_name) values (env_seq.nextval, 'Wildlife Park');
+INSERT INTO environment (env_id, env_name) values (env_seq.nextval, 'Sanctuary');
+INSERT INTO environment (env_id, env_name) values (env_seq.nextval, 'Nature Reserve');
+INSERT INTO environment (env_id, env_name) values (env_seq.nextval, 'Other');
+
+ALTER TABLE centre
+    ADD env_id NUMBER(6) DEFAULT 5 NOT NULL;
+
+COMMENT ON COLUMN centre.env_id IS
+    'Identifier for the environment';
+    
+UPDATE centre 
+SET env_id = (CASE 
+                      WHEN centre.centre_name LIKE '%Zoo%'
+                        THEN 1
+                      WHEN centre.centre_name LIKE '%Park%'
+                        THEN 2
+                      WHEN centre.centre_name LIKE '%Sanctuary%'
+                        THEN 3
+                      WHEN centre.centre_name LIKE '%Reserve%'
+                        THEN 4                       
+                    END);    
