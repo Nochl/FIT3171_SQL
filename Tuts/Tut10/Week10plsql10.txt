@@ -1,0 +1,136 @@
+SQL> 
+SQL> CREATE OR REPLACE TRIGGER UNIT_UPD_CASCADE 
+  2  AFTER UPDATE OF UNIT_CODE ON UNIT 
+  3  FOR EACH ROW 
+  4  BEGIN
+  5    UPDATE enrolment
+  6    SET unit_code = :new.unit_code
+  7    WHERE unit_code = :old.unit_code;
+  8  
+  9    DBMS_OUTPUT.PUT_LINE('Updated all matching rows in enrolment');
+ 10  END;
+ 11  /
+
+Trigger UNIT_UPD_CASCADE compiled
+
+SQL> 
+SQL> -- Test Harness
+SQL> -- Prior case
+SQL> SELECT * FROM unit;
+
+UNIT_CO UNIT_NAME                                          UNIT_NO_STUDENT
+------- -------------------------------------------------- ---------------
+FIT9131 Programming foundations                                          5
+FIT9132 Introduction to databases                                        5
+FIT9134 Computer architecture and operating systems                      5
+FIT9135 Data communications                                              5
+FIT5057 Project management                                               5
+
+SQL> SELECT * FROM enrolment;
+
+   STU_NBR UNIT_CO ENROL_YEAR E ENROL_MARK EN
+---------- ------- ---------- - ---------- --
+  11111121 FIT9131       2020 1         35 N 
+  11111122 FIT9131       2020 1         62 C 
+  11111123 FIT9131       2020 1         76 D 
+  11111124 FIT9131       2020 1         85 HD
+  11111125 FIT9131       2020 1         64 C 
+  11111121 FIT9132       2020 1         55 P 
+  11111122 FIT9132       2020 1         67 C 
+  11111123 FIT9132       2020 1         62 C 
+  11111124 FIT9132       2020 1         45 N 
+  11111125 FIT9132       2020 1         55 P 
+  11111121 FIT9135       2020 2         46 N 
+
+   STU_NBR UNIT_CO ENROL_YEAR E ENROL_MARK EN
+---------- ------- ---------- - ---------- --
+  11111122 FIT9135       2020 2         70 D 
+  11111123 FIT9135       2020 2         83 HD
+  11111124 FIT9135       2020 2         92 HD
+  11111125 FIT9135       2020 2         66 C 
+  11111121 FIT9134       2020 2         48 N 
+  11111122 FIT9134       2020 2         65 C 
+  11111123 FIT9134       2020 2         79 D 
+  11111124 FIT9134       2020 2         80 HD
+  11111125 FIT9134       2020 2         72 D 
+  11111121 FIT5057       2021 1              
+  11111122 FIT5057       2021 1              
+
+   STU_NBR UNIT_CO ENROL_YEAR E ENROL_MARK EN
+---------- ------- ---------- - ---------- --
+  11111123 FIT5057       2021 1              
+  11111124 FIT5057       2021 1              
+  11111125 FIT5057       2021 1              
+
+25 rows selected. 
+
+SQL> 
+SQL> -- Trigger Event
+SQL> UPDATE unit
+  2  SET unit_code = 'FIT913X'
+  3  WHERE unit_code = 'FIT9131';
+
+1 row updated.
+
+SQL> 
+SQL> -- Post case
+SQL> SELECT * FROM unit;
+
+UNIT_CO UNIT_NAME                                          UNIT_NO_STUDENT
+------- -------------------------------------------------- ---------------
+FIT913X Programming foundations                                          5
+FIT9132 Introduction to databases                                        5
+FIT9134 Computer architecture and operating systems                      5
+FIT9135 Data communications                                              5
+FIT5057 Project management                                               5
+
+SQL> SELECT * FROM enrolment;
+
+   STU_NBR UNIT_CO ENROL_YEAR E ENROL_MARK EN
+---------- ------- ---------- - ---------- --
+  11111121 FIT913X       2020 1         35 N 
+  11111122 FIT913X       2020 1         62 C 
+  11111123 FIT913X       2020 1         76 D 
+  11111124 FIT913X       2020 1         85 HD
+  11111125 FIT913X       2020 1         64 C 
+  11111121 FIT9132       2020 1         55 P 
+  11111122 FIT9132       2020 1         67 C 
+  11111123 FIT9132       2020 1         62 C 
+  11111124 FIT9132       2020 1         45 N 
+  11111125 FIT9132       2020 1         55 P 
+  11111121 FIT9135       2020 2         46 N 
+
+   STU_NBR UNIT_CO ENROL_YEAR E ENROL_MARK EN
+---------- ------- ---------- - ---------- --
+  11111122 FIT9135       2020 2         70 D 
+  11111123 FIT9135       2020 2         83 HD
+  11111124 FIT9135       2020 2         92 HD
+  11111125 FIT9135       2020 2         66 C 
+  11111121 FIT9134       2020 2         48 N 
+  11111122 FIT9134       2020 2         65 C 
+  11111123 FIT9134       2020 2         79 D 
+  11111124 FIT9134       2020 2         80 HD
+  11111125 FIT9134       2020 2         72 D 
+  11111121 FIT5057       2021 1              
+  11111122 FIT5057       2021 1              
+
+   STU_NBR UNIT_CO ENROL_YEAR E ENROL_MARK EN
+---------- ------- ---------- - ---------- --
+  11111123 FIT5057       2021 1              
+  11111124 FIT5057       2021 1              
+  11111125 FIT5057       2021 1              
+
+25 rows selected. 
+
+SQL> 
+SQL> -- Revert
+SQL> ROLLBACK;
+
+Rollback complete.
+
+SQL> 
+SQL> 
+SQL> 
+SQL> 
+SQL> 
+SQL> SET ECHO OFF
