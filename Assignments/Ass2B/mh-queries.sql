@@ -129,6 +129,20 @@ ORDER BY TOTALCHARTERCOST DESC;
 */
 -- PLEASE PLACE REQUIRED SQL STATEMENT FOR THIS PART HERE
 -- ENSURE your query has a semicolon (;) at the end of this answer
+SELECT c.charter_nbr,(e.emp_fname || ' ' || e.emp_lname) AS Pilot_name, 
+    CASE 
+        WHEN t.client_fname IS NULL THEN
+            t.client_lname
+        ELSE (t.client_fname || ' ' || t.client_lname) 
+        END AS Clientname
+
+FROM (mh.charter c JOIN mh.employee e ON c.emp_nbr = e.emp_nbr) JOIN mh.client t ON c.client_nbr = t.client_nbr
+WHERE c.charter_nbr NOT IN 
+    (SELECT DISTINCT l.charter_nbr
+        FROM mh.charter_leg l
+        WHERE l.cl_etd != l.cl_atd)
+ORDER BY c.charter_nbr;
+
 
 
 /*
@@ -136,4 +150,27 @@ ORDER BY TOTALCHARTERCOST DESC;
 */
 -- PLEASE PLACE REQUIRED SQL STATEMENT FOR THIS PART HERE
 -- ENSURE your query has a semicolon (;) at the end of this answer
-
+SELECT c.client_nbr, 
+       CASE 
+            WHEN c.client_fname IS NULL THEN
+                c.client_lname
+            ELSE (c.client_fname || ' ' || c.client_lname) 
+        END AS Clientname,
+       n.location_name,  
+       count(l.cl_leg_nbr) as LOCATIONCOUNT
+FROM (((SELECT calculated.client_nbr, max(calculated.visited) AS MAXIMUM
+    FROM (SELECT c.client_nbr, count(l.cl_leg_nbr) AS visited
+         FROM ((mh.location n JOIN mh.charter_leg l ON n.location_nbr = l.location_nbr_destination)
+                JOIN mh.charter c ON c.charter_nbr = l.charter_nbr)
+                LEFT OUTER JOIN mh.client i ON c.client_nbr = i.client_nbr
+         GROUP BY n.location_name, c.client_nbr
+         ORDER BY c.client_nbr)calculated
+    GROUP BY calculated.client_nbr)maxed
+    JOIN mh.client c ON maxed.client_nbr = c.client_nbr))
+    JOIN mh.charter h ON c.client_nbr = h.client_NBR
+    JOIN mh.charter_leg l ON l.charter_nbr = h.charter_nbr
+    JOIN mh.location n ON n.location_nbr = l.location_nbr_destination
+GROUP BY c.client_nbr, maxed.maximum,  n.location_name, c.client_fname, c.client_lname
+HAVING maxed.maximum=count(l.cl_leg_nbr)
+ORDER BY c.client_nbr, n.location_name
+;     
